@@ -7,11 +7,8 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hydrogen &mdash; A free HTML5 Template by FREEHTML5.CO</title>
+	<title>KTH</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
 
   <!-- 
 	//////////////////////////////////////////////////////
@@ -59,8 +56,25 @@
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
+
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script>
+      function onSubmit(token) {
+        document.getElementById("contactForm").submit();
+        window.location='sendua';
+      }
+    </script>
+    <!-- ===========================
+     GOOGLE ANALYTICS (Optional)
+     =========================== -->
+
+    <!--Replace this line with your analytics code-->
+
+    <!-- Analytics end-->
+
 
 	</head>
 	<body>
@@ -102,27 +116,43 @@
 				<div class="col-md-8 col-md-offset-2">
 					<h2>Зв'язатися з нами</h2>
 					<div class="fh5co-spacer fh5co-spacer-sm"></div>
-					<form action="#">
+					<script type="text/javascript">var submitted=false;</script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                            onload="if(submitted)  {window.location='sendua';}"></iframe>
+					<form role="form" id="contactForm"
+                          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScrF__8k9ZJEzfSBf_TrXUZpZvIwdGlKfBwv5mZb_LwkLo-fw/formResponse"
+                          method="post" target="hidden_iframe"
+                          onsubmit="submitted=true;">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Ім'я">
+									<input name="entry.2114240078" type="text" class="form-control" placeholder="Ім'я">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Прізвище">
+									<input name="entry.1323115375" type="text" class="form-control" placeholder="Прізвище">
+								</div>
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+									<input name="entry.2142796112" type="email" class="form-control" placeholder="Пошта">
+								</div>
+							</div>
+							<div class="col-md-6">
+							<div class="form-group">
+									<input name="entry.1578715819" type="text" class="form-control" placeholder="Контактний номер">
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="email" class="form-control" placeholder="Email">
+									<textarea name="entry.617400588" id="message" cols="30" class="form-control" rows="10" placeholder="Повідомлення"></textarea>
+									<p style="margin-top: 8px" align="center">This site is protected by reCAPTCHA and the Google
+                            <a href="https://policies.google.com/privacy">Privacy Policy</a> and
+										<a href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
 								</div>
-								<div class="form-group">
-									<textarea name="message" id="message" cols="30" class="form-control" rows="10" placeholder="Повідомлення"></textarea>
-								</div>
-								<div class="form-group">
-									<input type="submit" class="btn btn-primary" value="Надіслати">
+								<div align="center" class="form-group">
+									<button data-badge="inline" id="form-submit" type="submit" class="btn btn-primary g-recaptcha"  data-sitekey="6LfS92QaAAAAAGwgJF1v6KchdXFTypD9FM6wOviy" data-callback='onSubmit'>Надіслати</button>
 								</div>
 							</div>
 						</div>
