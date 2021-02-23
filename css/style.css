@@ -7591,9 +7591,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 2px;
+  line-height: 1.4;
   font-size: 20px;
   font-family: "Montserrat", arial, sans-serif;
   color: #000;
+  padding-left: 85px;
+
 }
 #fh5co-header .navbar-brand:hover {
   color: #404040;
@@ -7606,6 +7609,11 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 0;
     margin-left: 0;
   }
+
+  #fh5co-header .navbar-brand {
+  padding-bottom: 95px;
+}
+
 }
 
 #fh5co-hero, .fh5co-bg-section {
@@ -7667,6 +7675,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 3em 0;
   }
 }
+
+
 
 .fh5co-bg-section .fh5co-overlay {
   background: #000;
